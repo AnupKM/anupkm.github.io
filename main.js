@@ -129,15 +129,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _mainpage_mainpage_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mainpage/mainpage.component */ "./src/app/mainpage/mainpage.component.ts");
-/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/inputtextarea */ "./node_modules/primeng/inputtextarea.js");
-/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/button.js");
-/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(primeng_button__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var primeng_editor__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/editor */ "./node_modules/primeng/editor.js");
-/* harmony import */ var primeng_editor__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(primeng_editor__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
-/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/inputtextarea */ "./node_modules/primeng/inputtextarea.js");
+/* harmony import */ var primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/button.js");
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(primeng_button__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var primeng_editor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/editor */ "./node_modules/primeng/editor.js");
+/* harmony import */ var primeng_editor__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(primeng_editor__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! primeng/carousel */ "./node_modules/primeng/carousel.js");
+/* harmony import */ var primeng_carousel__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(primeng_carousel__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! primeng/dialog */ "./node_modules/primeng/dialog.js");
+/* harmony import */ var primeng_dialog__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(primeng_dialog__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
 
 
 
@@ -162,12 +167,14 @@ var AppModule = /** @class */ (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
-                primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_7__["InputTextareaModule"],
-                primeng_editor__WEBPACK_IMPORTED_MODULE_9__["EditorModule"],
-                primeng_button__WEBPACK_IMPORTED_MODULE_8__["ButtonModule"],
-                primeng_carousel__WEBPACK_IMPORTED_MODULE_10__["CarouselModule"]
+                primeng_inputtextarea__WEBPACK_IMPORTED_MODULE_8__["InputTextareaModule"],
+                primeng_editor__WEBPACK_IMPORTED_MODULE_10__["EditorModule"],
+                primeng_button__WEBPACK_IMPORTED_MODULE_9__["ButtonModule"],
+                primeng_carousel__WEBPACK_IMPORTED_MODULE_11__["CarouselModule"],
+                primeng_dialog__WEBPACK_IMPORTED_MODULE_12__["DialogModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -198,7 +205,7 @@ module.exports = ".textareaWidth{\r\n    width: 20px;\r\n}\r\n\r\n#debug{\r\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<hr style=\"border-top:0px;border-color:#dde3e6\">\n\n<h2>Welcome to Search horse</h2>\n<h4>Instructions :-</h4>\n<h5>1. Copy text below or write it on your own.<br>\n2. Selecet the text(at least 4 words) you want to search.(for eg. of the morpheme)<br>\n3. Click Search button</h5>\n\n<div (mouseup)=\"showSelectedText()\">\n<p-editor id=\"ttt\" [(ngModel)]=\"textToSearch\" \n    [style]=\"{'height':'300px'}\" >\n    <p-header>\n        <span class=\"ql-formats\">\n            <button class=\"ql-bold\" aria-label=\"Bold\"></button>\n            <button class=\"ql-italic\" aria-label=\"Italic\"></button>\n            <button class=\"ql-underline\" aria-label=\"Underline\"></button>\n             <button class=\"ql-font\" aria-label=\"Font\"></button>\n        </span>\n        <span class=\"ql-formats\">\n            <select class=\"ql-font\"></select>\n            <select class=\"ql-size\"></select>\n          </span>\n        <span class=\"ql-formats\">\n            <select class=\"ql-color\"></select>\n           <!--<select class=\"ql-background-r\"></select>--> \n        </span>            \n    </p-header>\n</p-editor>\n</div>\n<hr style=\"border-top:0px;border-color:#dde3e6\">\n\n<div class=\"content-section implementation\">\n<button pButton class=\"buttonPadding\" type=\"button\" label=\"Clear All\" icon=\"pi pi-times\" (click)=\"textToSearch=null && selectedText=null\"></button>\n<button pButton type=\"button\" label=\"Search\" icon=\"pi pi-search\" (click)=\"searchClicked()\"></button>\n</div>\n<hr style=\"border-top:0px;border-color:#dde3e6\">\n\n<!--<p>Value: {{textToSearch||'empty'}}</p>-->\n<p>Text to search : {{selectedText||'empty'}}</p>\n\n\n\n\n\n<p-carousel headerText=\"Search Results\" [value]=\"this.service.searchList\">\n    <ng-template let-article pTemplate=\"item\">\n        <div class=\"ui-grid ui-grid-responsive searchResultArea\">           \n            <div class=\"ui-grid-row\">\n                <div class=\"ui-grid-col-2\">Title : </div>\n                <div class=\"ui-grid-col-10\">{{article.title}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row paragraphArea\">\n                    <div class=\"ui-grid-col-2\">Preview : </div>\n                    <div class=\"ui-grid-col-10\">{{article.paragraph}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row\">\n                <div class=\"ui-grid-col-2\">Authors : </div>\n                <div class=\"ui-grid-col-10\">{{article.authors}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-12\">\n                <button type=\"button\" pButton label=\"View file\" icon=\"pi pi-file\" (click)=\"clickOpen(article)\"></button>\n                <button type=\"button\" pButton label=\"Download file\" icon=\"pi pi-download\" (click)=\"clickDownload(article)\"></button>         \n            </div>\n                \n            </div>\n        </div>\n    </ng-template>\n</p-carousel>"
+module.exports = "\n<hr style=\"border-top:0px;border-color:#dde3e6\">\n\n<h2>Welcome to Search horse</h2>\n<h5>1. Copy text below or write it on your own.<br>\n2. Select the text(at least X words) you want to search.(for eg. of the morpheme)<br>\n3. Click Search button</h5>\n\n<div (mouseup)=\"showSelectedText()\">\n<p-editor id=\"ttt\" [(ngModel)]=\"textToSearch\" \n    [style]=\"{'height':'300px'}\" >\n    <p-header>\n        <span class=\"ql-formats\">\n            <button class=\"ql-bold\" aria-label=\"Bold\"></button>\n            <button class=\"ql-italic\" aria-label=\"Italic\"></button>\n            <button class=\"ql-underline\" aria-label=\"Underline\"></button>\n             <button class=\"ql-font\" aria-label=\"Font\"></button>\n        </span>\n        <span class=\"ql-formats\">\n            <select class=\"ql-font\"></select>\n            <select class=\"ql-size\"></select>\n          </span>\n        <span class=\"ql-formats\">\n            <select class=\"ql-color\"></select>\n           <!--<select class=\"ql-background-r\"></select>--> \n        </span>            \n    </p-header>\n</p-editor>\n</div>\n<hr style=\"border-top:0px;border-color:#dde3e6\">\n\n<div class=\"content-section implementation\">\n<button pButton class=\"buttonPadding\" type=\"button\" label=\"Clear All\" icon=\"pi pi-times\" (click)=\"textToSearch=null && selectedText=null\"></button>\n<button pButton type=\"button\" label=\"Search\" icon=\"pi pi-search\" (click)=\"searchClicked()\"></button>\n<button pButton type=\"button\" label=\"Test\" icon=\"pi pi-search\" (click)=\"showDialog()\"></button>\n\n</div>\n<hr style=\"border-top:0px;border-color:#dde3e6\">\n\n<!--<p>Value: {{textToSearch||'empty'}}</p>-->\n<p>Text to search : {{selectedText||'empty'}}</p>\n\n<p-dialog header=\"Your article\" [dismissableMask]=\"true\" [blockScroll]=\"true\" [closeOnEscape]=\"true\" [(visible)]=\"display\" [modal]=\"true\" [responsive]=\"true\" \n        [maximizable]=\"true\" >\n        <iframe height=\"750px\" width=\"1000px\" [src]=\"urlFrame\"  frameborder=\"0\" allowfullscreen ></iframe> \n        <p-footer>\n            <button type=\"button\" pButton icon=\"pi pi-check\" (click)=\"display=false\" label=\"Insert Citation\"></button>\n            <button type=\"button\" pButton icon=\"pi pi-close\" (click)=\"display=false ;  addCitation()\" label=\"Cancel\"  class=\"ui-button-secondary\"></button>\n        </p-footer>\n</p-dialog>\n\n<p-carousel headerText=\"Search Results\" [value]=\"this.service.searchList\">\n    <ng-template let-article pTemplate=\"item\">\n        <div class=\"ui-grid ui-grid-responsive searchResultArea\">           \n            <div class=\"ui-grid-row\">\n                <div class=\"ui-grid-col-2\">Title : </div>\n                <div class=\"ui-grid-col-10\">{{article.title}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row\">\n                <div class=\"ui-grid-col-2\">Published Year : </div>\n                <div class=\"ui-grid-col-10\">{{article.yearPublished}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row paragraphArea\">\n                    <div class=\"ui-grid-col-2\">Preview : </div>\n                    <div class=\"ui-grid-col-10\">{{article.paragraph}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row\">\n                <div class=\"ui-grid-col-2\">Authors : </div>\n                <div class=\"ui-grid-col-10\">{{article.authors}}</div>\n            </div>\n            <hr>\n            <div class=\"ui-grid-row\">\n            <div class=\"ui-grid-col-12\">\n                <button type=\"button\" pButton label=\"View file\" icon=\"pi pi-file\" (click)=\"clickOpen(article)\"></button>\n                <button type=\"button\" pButton label=\"Insert Citation\" icon=\"pi pi-download\" (click)=\"clickInsertC(article)\"></button>         \n            </div>\n                \n            </div>\n        </div>\n    </ng-template>\n</p-carousel>"
 
 /***/ }),
 
@@ -215,20 +222,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _service_search_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/search.service */ "./src/app/service/search.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
 
 
 
 var MainpageComponent = /** @class */ (function () {
-    function MainpageComponent(service) {
+    function MainpageComponent(service, sanitizer) {
         this.service = service;
+        this.sanitizer = sanitizer;
         this.textToSearch = '';
         this.selectedText = '';
+        //Boolean for dailog
+        this.display = false;
     }
     MainpageComponent.prototype.ngOnInit = function () {
+        var url = 'https://www.aclweb.org/anthology/';
+        this.urlFrame = this.getSafeUrl(url);
+        console.log(this.urlFrame);
         this.service.getUserList();
         this.userList = this.service.userList;
         console.log(this.service.userList);
         this.service.postPost();
+    };
+    MainpageComponent.prototype.showDialog = function () {
+        this.display = true;
+    };
+    MainpageComponent.prototype.hideDialog = function () {
+        this.display = false;
     };
     MainpageComponent.prototype.searchClicked = function () {
         //console.log(this.textToSearch);
@@ -236,16 +257,38 @@ var MainpageComponent = /** @class */ (function () {
         // this.service.postPost();
         //console.log("hello" + this.service.userList[1].email);
         //console.log("all list:- " + this.service.userList.values.toString);
-        console.log("searching" + this.selectedText);
+        console.log("searching text" + this.selectedText);
         this.service.searchText(this.selectedText);
     };
     MainpageComponent.prototype.clickOpen = function (article) {
         console.log(article.paperId);
         console.log(article.paragraph);
+        this.urlFrame = this.getSafeUrl(article.pdfUrl);
+        this.showDialog();
     };
-    MainpageComponent.prototype.clickDownload = function (article) {
-        console.log(article.paperId);
+    MainpageComponent.prototype.clickInsertC = function (article) {
+        console.log(article.title);
+        console.log(article.authors);
+        console.log(article.yearPublished);
+        console.log(article.pdfUrl);
+        this.citation = '';
+        this.citation = article.title + "," + article.authors + "," + article.yearPublished
+            + "," + article.pdfUrl;
+        this.addCitation();
     };
+    MainpageComponent.prototype.addCitation = function () {
+        console.log("Adding Citation :- " + this.citation);
+    };
+    /**
+     * previewUrl(url,target){
+        //use timeout coz mousehover fires several times
+        clearTimeout(window.);
+        window.ht = setTimeout(function(){
+            var div = document.getElementById(target);
+            div.innerHTML = '<iframe style="width:100%;height:100%;" frameborder="0" src="' + url + '" />';
+        },20);
+    }
+     */
     MainpageComponent.prototype.showSelectedText = function () {
         var text = "";
         if (window.getSelection) {
@@ -253,13 +296,17 @@ var MainpageComponent = /** @class */ (function () {
         }
         this.selectedText = text;
     };
+    // to remove error : Error: unsafe value used in a resource URL context
+    MainpageComponent.prototype.getSafeUrl = function (url) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    };
     MainpageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-mainpage',
             template: __webpack_require__(/*! ./mainpage.component.html */ "./src/app/mainpage/mainpage.component.html"),
             styles: [__webpack_require__(/*! ./mainpage.component.css */ "./src/app/mainpage/mainpage.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_search_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_search_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
     ], MainpageComponent);
     return MainpageComponent;
 }());
